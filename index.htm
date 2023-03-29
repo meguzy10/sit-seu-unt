@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>sit</title>
+
+
+
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+<script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
+<link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
+<style>
+
+
+
+	body { margin: 0; padding: 0; }
+	#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+	
+	.maplibregl-popup {
+max-width: 200px;
+font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	
+}
+
+
+	
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+<div id="map"></div>
+
+
+<script>
+
+var map = new maplibregl.Map({
+container: 'map', // container id
+style: 'https://api.maptiler.com/maps/streets-v2/style.json?key=fm5kYV8R3f6w2HpChG8u', // style URL
+center: [-65.21780, -26.86662],
+zoom: 10
+});
+ 
+map.on('load', function () {
+map.loadImage(
+'https://maplibre.org/maplibre-gl-js-docs/assets/custom_marker.png',
+// Add an image to use as a custom marker
+function (error, image) {
+if (error) throw error;
+map.addImage('custom-marker', image);
+ 
+map.addSource('places', {
+'type': 'geojson',
+'data': {
+'type': 'FeatureCollection',
+'features': [
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Cet Villa Amalia - zona sur - San Miguel de TucumAn - </strong><p>Barrio de la capital tucumana asenteada en la zona del ex Ingenio Amalia - . El Ingenio Amalia se cerrO en 1967 , durante el gobierno de facto de OnganIa, *zona urbanizada de caracterIsticas sociales diversas. Su poblacIon es clase baja, siendo afectada por la falta de trabajo en la zona. MAs Informacion .</p>'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-65.21780, -26.86662]
+}
+},
+
+
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>CET Villa Obrera Tafi Viejo</strong><p>Tafi Viejo esta situada al noreste de San Miguel de TucumAn -  EL centro universitario tiene por objeto, articular con la comunidad , mediante activdades academIcas Sociales y Culturales</p>'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-65.24981, -26.73700]
+}
+},
+
+
+
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Cet Barrio Piloto - Santisima Trinidad</strong><p>Situado en la Ciudad de Alderetes , al este de San Miguel de TucumAn , al margendel Rio Sali, La zona conocida como barrio Piloto es una zona de alta vulnerabilidad social, su población es de bajos recursos y tiene como centro de encuentro, la Capilla Santísima Trinidad y sus instelaciones que ademas tiene un comedor-merendero. el comedor funciona los lunes miercoles y viernes. Otra actividades</p>'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-65.16102, -26.8284]
+}
+},
+
+
+
+
+
+
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>Cet ATE </strong><p>Es un barrio de casa bajas y la zona esta semi urbanizada, con algunas calles adoquinadas y con poco alumbrado público. Existen en el barrio contadas Organizaciones Civiles y Sociales</p>'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-65.25676, -26.84557]
+}
+},
+
+
+
+
+
+
+
+
+
+
+{
+'type': 'Feature',
+'properties': {
+'description':
+'<strong>CET BELLA VISTA - R ALfonSIN</strong><p>La ciudad de Bella Vista está ubicada en la zona llana de esa provincia, a unos 30 km del cordón montañoso del Aconquija y cercana al río Colorado</p>'
+},
+'geometry': {
+'type': 'Point',
+'coordinates': [-65.30646, -27.03190]
+}
+}
+]
+}
+});
+ 
+// Add a layer showing the places.
+map.addLayer({
+'id': 'places',
+'type': 'symbol',
+'source': 'places',
+'layout': {
+'icon-image': 'custom-marker',
+'icon-overlap': 'always'
+}
+});
+}
+);
+ 
+// Create a popup, but don't add it to the map yet.
+var popup = new maplibregl.Popup({
+closeButton: false,
+closeOnClick: false
+});
+ 
+map.on('mouseenter', 'places', function (e) {
+// Change the cursor style as a UI indicator.
+map.getCanvas().style.cursor = 'pointer';
+ 
+var coordinates = e.features[0].geometry.coordinates.slice();
+var description = e.features[0].properties.description;
+ 
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+ 
+// Populate the popup and set its coordinates
+// based on the feature found.
+popup.setLngLat(coordinates).setHTML(description).addTo(map);
+});
+ 
+map.on('mouseleave', 'places', function () {
+map.getCanvas().style.cursor = '';
+popup.remove();
+});
+});
+</script>
+ 
+ 
+ 
+
+
+<div id="Layer2" style="position:absolute; width:80; height:80; z-index:1; left: 1187px; top: 21px;"><img src="sit2.gif" width="80" height="80"></div>
+
+
+
+
+<!-- AddToAny BEGIN -->
+  
+<div class="a2a_kit a2a_kit_size_100 a2a_floating_style a2a_default_style" style="bottom:50px;">
+  
+    
+  <div> <a href="index.htm" target="_self"><img src="logo%20home.jpg" width="47" height="47" border="0"></a> 
+    <a href="nosotros/nosotros.htm" target="_self"><img src="logo_info.jpg" width="47" height="47" border="0"></a> 
+    <a href="proyecto/proyecto.htm" target="_self"><img src="logo_proyecto.jpg" width="47" height="47" border="0"></a> 
+    <a href="imagenes/imagenes.htm" target="_self"><img src="logo_imagenes.jpg" width="47" height="47" border="0"></a> 
+    <a href="mapgoogle.htm" target="_self"><img src="logo_maoag.jpg" width="47" height="47" border="0"></a> 
+  </div>
+ 
+</div>
+
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+
+
+<!-- AddToAny END -->
+
+
+ 
+</body>
+</html>
+ 
+ 
+</body>
+</html>
