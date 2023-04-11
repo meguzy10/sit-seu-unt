@@ -1,208 +1,217 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8" />
-<title>sit</title>
-
-
-
-<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
-<script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
-<link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
-<style>
-
-
-
-	body { margin: 0; padding: 0; }
-	#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+	<base target="_top">
 	
-	.maplibregl-popup {
-max-width: 200px;
-font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-}
+	<title>sit</title>
+	
+	<link rel="shortcut icon" type="image/x-icon" href="../work_geojson/docs/images/favicon.ico" />
 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+	<style>
+		html, body {
+			
+			height: 100%;
+			width: 80%;
+			margin: auto;
+			font-family: Arial, Helvetica, sans-serif;
+			
+		}
+		.leaflet-container {
+			height: 100%;
+			width: 100%px;
+		
+			
+		
+		}
+		
+		.content {
+			max-width: 900px;
+			margin: auto;
+			background: white;
+			padding: 4px;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+	
+	</style>
 
 	
-</style>
-
-
 </head>
-
 
 <body>
 
 
 
-<div id="map"></div>
-
+<div id='map'></div>
 
 <script>
 
-var map = new maplibregl.Map({
-container: 'map', // container id
-style: 'https://api.maptiler.com/maps/streets-v2/style.json?key=fm5kYV8R3f6w2HpChG8u', // style URL
-center: [-65.21780, -26.86662],
-zoom: 10
+   /*===================================================
+                      OSM  LAYER               
+===================================================*/
+
+    var map = L.map('map').setView([-26.585, -65.53], 8);
+var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 });
- 
-map.on('load', function () {
-map.loadImage(
-'https://maplibre.org/maplibre-gl-js-docs/assets/custom_marker.png',
-// Add an image to use as a custom marker
-function (error, image) {
-if (error) throw error;
-map.addImage('custom-marker', image);
- 
-map.addSource('places', {
-'type': 'geojson',
-'data': {
-'type': 'FeatureCollection',
-'features': [
-{
-'type': 'Feature',
-'properties': {
-'description':
-'<strong>Cet Villa Amalia - zona sur - San Miguel de TucumAn - </strong><p>Barrio de la capital tucumana asenteada en la zona del ex Ingenio Amalia - . El Ingenio Amalia se cerrO en 1967 , durante el gobierno de facto de OnganIa, *zona urbanizada de caracterIsticas sociales diversas. Su poblacIon es clase baja, siendo afectada por la falta de trabajo en la zona. MAs Informacion .</p>'
-},
-'geometry': {
-'type': 'Point',
-'coordinates': [-65.21780, -26.86662]
-}
-},
+osm.addTo(map);
 
+/*===================================================
+                      MARKER               
+===================================================*/
 
-{
-'type': 'Feature',
-'properties': {
-'description':
-'<strong>CET Villa Obrera Tafi Viejo</strong><p>Tafi Viejo esta situada al noreste de San Miguel de TucumAn -  EL centro universitario tiene por objeto, articular con la comunidad , mediante activdades academIcas Sociales y Culturales</p>'
-},
-'geometry': {
-'type': 'Point',
-'coordinates': [-65.24981, -26.73700]
-}
-},
-
-
-
-{
-'type': 'Feature',
-'properties': {
-'description':
-'<strong>Cet Barrio Piloto - Santisima Trinidad</strong><p>Situado en la Ciudad de Alderetes , al este de San Miguel de TucumAn , al margendel Rio Sali, La zona conocida como barrio Piloto es una zona de alta vulnerabilidad social, su población es de bajos recursos y tiene como centro de encuentro, la Capilla Santísima Trinidad y sus instelaciones que ademas tiene un comedor-merendero. el comedor funciona los lunes miercoles y viernes. Otra actividades</p>'
-},
-'geometry': {
-'type': 'Point',
-'coordinates': [-65.16102, -26.8284]
-}
-},
+var singleMarker = L.marker([-26.585, -65.53]);
+singleMarker.addTo(map);
+var popup = singleMarker.bindPopup('CET 1')
+popup.addTo(map);
 
 
 
 
+const myIcon2 = L.icon({
+    iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/ong_verde_gold.png',
+    iconSize: [25, 25],
+    iconAnchor: [20, 20],
+    popupAnchor: [-3, -10],
 
-
-{
-'type': 'Feature',
-'properties': {
-'description':
-'<strong>Cet ATE </strong><p>Es un barrio de casa bajas y la zona esta semi urbanizada, con algunas calles adoquinadas y con poco alumbrado público. Existen en el barrio contadas Organizaciones Civiles y Sociales</p>'
-},
-'geometry': {
-'type': 'Point',
-'coordinates': [-65.25676, -26.84557]
-}
-},
-
-
-
-
-
-
-
-
-
-
-{
-'type': 'Feature',
-'properties': {
-'description':
-'<strong>CET BELLA VISTA - R ALfonSIN</strong><p>La ciudad de Bella Vista está ubicada en la zona llana de esa provincia, a unos 30 km del cordón montañoso del Aconquija y cercana al río Colorado</p>'
-},
-'geometry': {
-'type': 'Point',
-'coordinates': [-65.30646, -27.03190]
-}
-}
-]
-}
 });
- 
-// Add a layer showing the places.
-map.addLayer({
-'id': 'places',
-'type': 'symbol',
-'source': 'places',
-'layout': {
-'icon-image': 'custom-marker',
-'icon-overlap': 'always'
-}
+
+const myIcon3 = L.icon({
+    iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_gob_gold.png',
+    iconSize: [25, 25],
+    iconAnchor: [20, 20],
+    popupAnchor: [-3, -10],
+
 });
-}
-);
- 
-// Create a popup, but don't add it to the map yet.
-var popup = new maplibregl.Popup({
-closeButton: false,
-closeOnClick: false
+
+const myIcon4 = L.icon({
+    iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_iglesia_gold.png',
+    iconSize: [28, 40],
+    iconAnchor: [20, 20],
+    popupAnchor: [-3, -10],
+
 });
- 
-map.on('mouseenter', 'places', function (e) {
-// Change the cursor style as a UI indicator.
-map.getCanvas().style.cursor = 'pointer';
- 
-var coordinates = e.features[0].geometry.coordinates.slice();
-var description = e.features[0].properties.description;
- 
-// Ensure that if the map is zoomed out such that multiple
-// copies of the feature are visible, the popup appears
-// over the copy being pointed to.
-while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-}
- 
-// Populate the popup and set its coordinates
-// based on the feature found.
-popup.setLngLat(coordinates).setHTML(description).addTo(map);
+
+const myIcon5 = L.icon({
+    iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_policia_gold.png',
+    iconSize: [28, 40],
+    iconAnchor: [20, 20],
+    popupAnchor: [-3, -10],
+
 });
- 
-map.on('mouseleave', 'places', function () {
-map.getCanvas().style.cursor = '';
-popup.remove();
+
+const proy = L.layerGroup();
+
+
+L.marker([-26.505, -65.57], {icon: myIcon2}).addTo(proy);
+
+L.marker([-26.521, -65.517], {icon: myIcon4}).addTo(proy);
+
+L.marker([-26.548, -65.599], {icon: myIcon5}).addTo(proy);
+
+  
+L.marker([-26.61, -65.32], {icon: myIcon2}).bindPopup('Proyecto 1').addTo(map);
+
+L.marker([-26.62, -65.24], {icon: myIcon3}).bindPopup('Proyecto 2 - las propuestas estan realizadas a partir de la construccion colectiva de los diferentes espacios').addTo(map);
+
+L.marker([-26.73, -65.33]).bindPopup('Proyecto 3').addTo(map);
+
+L.marker([-26.5, -65.23]).bindPopup('Proyecto 4').addTo(map);
+	
+  
+
+
+/*===================================================
+                     TILE LAYER               
+===================================================*/
+
+var CartoDB_DarkMatter = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+subdomains: 'abcd',
+	maxZoom: 19
 });
+CartoDB_DarkMatter.addTo(map);
+
+// Google Map Layer
+
+googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',{
+    maxZoom: 20,
+    subdomains:['mt0','mt1','mt2','mt3']
+ });
+ googleStreets.addTo(map);
+
+ // Satelite Layer
+googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
+   maxZoom: 20,
+   subdomains:['mt0','mt1','mt2','mt3']
+ });
+googleSat.addTo(map);
+
+var Stamen_Watercolor = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
+ attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+subdomains: 'abcd',
+minZoom: 1,
+maxZoom: 16,
+ext: 'jpg'
 });
+Stamen_Watercolor.addTo(map);
+
+/*===================================================
+                      LAYER CONTROL               
+===================================================*/
+
+var baseLayers = {
+    "Satellite":googleSat,
+    "Google Map":googleStreets,
+    "Water Color":Stamen_Watercolor,
+    "OpenStreetMap": osm,
+};
+
+var overlays = {
+    "Marker": singleMarker,
+	"Proyectos": proy
+ };
+
+L.control.layers(baseLayers, overlays).addTo(map);
+
+
+/*===================================================
+                      SEARCH BUTTON               
+===================================================*/
+
+L.Control.geocoder().addTo(map);
+
+
+
+
+
+
+	
+	
 </script>
- 
- 
- 
-
-
-<div id="Layer2" style="position:absolute; width:80; height:80; z-index:1; left: 500px; top: 21px;"><img src="sit2.gif" width="80" height="80"></div>
-
-
 
 
 <!-- AddToAny BEGIN -->
-  
-<div class="a2a_kit a2a_kit_size_100 a2a_floating_style a2a_default_style" style="bottom:50px;">
+
+<div class="a2a_kit a2a_kit_size_3 a2a_floating_style a2a_default_style" style="bottom:430px;">
   
     
-  <div> <a href="index.htm" target="_self"><img src="logo%20home.jpg" width="47" height="47" border="0"></a> 
-    <a href="nosotros/nosotros.htm" target="_self"><img src="logo_info.jpg" width="47" height="47" border="0"></a> 
-    <a href="proyecto/proyecto.htm" target="_self"><img src="logo_proyecto.jpg" width="47" height="47" border="0"></a> 
-    <a href="imagenes/imagenes.htm" target="_self"><img src="logo_imagenes.jpg" width="47" height="47" border="0"></a> 
-    <a href="mapgoogle.htm" target="_self"><img src="logo_maoag.jpg" width="47" height="47" border="0"></a> 
+  <div> <img src="Iconos/sit.png" width="60" height="60" border="0"></a> </div>
+ 
+</div>
+
+
+  
+<div class="a2a_kit a2a_kit_size_50 a2a_floating_style a2a_default_style" style="bottom:35px;">
+  
+    
+  <div> <a href="index.htm" target="_self"><img src="Iconos/logo_home.png" width="47" height="47" border="0"></a> 
+    <a href="informacion/informacion.htm" target="_self"><img src="Iconos/logo_info.png" width="47" height="47" border="0"></a> 
+    <a href="imagenes/imagenes.htm" target="_self"><img src="Iconos/logo_imagenes.png" width="47" height="47" border="0"></a> 
   </div>
  
 </div>
@@ -213,10 +222,8 @@ popup.remove();
 <!-- AddToAny END -->
 
 
- 
-</body>
-</html>
- 
- 
+
+
+
 </body>
 </html>
