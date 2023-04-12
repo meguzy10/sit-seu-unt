@@ -66,7 +66,7 @@ osm.addTo(map);
 
 var singleMarker = L.marker([-26.585, -65.53]);
 singleMarker.addTo(map);
-var popup = singleMarker.bindPopup('CET 1')
+var popup = singleMarker.bindPopup('CET 1- Villa Obrera Tafí Viejo')
 popup.addTo(map);
 
 
@@ -145,14 +145,17 @@ const myIcon8 = L.icon({
 const proy = L.layerGroup();
 
 
-L.marker([-26.505, -65.57], {icon: myIcon2}).addTo(proy);
+L.marker([-26.505, -65.57], {icon: myIcon8}).addTo(proy);
 
 L.marker([-26.521, -65.517], {icon: myIcon4}).addTo(proy);
 
 L.marker([-26.548, -65.599], {icon: myIcon5}).addTo(proy);
 
+L.marker([-26.81, -65.82], {icon: myIcon7}).bindPopup('comedor y merendero').addTo(map);
   
-L.marker([-26.61, -65.32], {icon: myIcon2}).bindPopup('Proyecto 1').addTo(map);
+L.marker([-26.69, -65.12], {icon: myIcon6}).bindPopup('Proyecto 99- participación de la poli').addTo(map);
+	
+L.marker([-26.61, -65.32], {icon: myIcon2}).bindPopup('Proyecto 1- recursos de investigación').addTo(map);
 
 L.marker([-26.62, -65.24], {icon: myIcon3}).bindPopup('Proyecto 2 - las propuestas estan realizadas a partir de la construccion colectiva de los diferentes espacios').addTo(map);
 
