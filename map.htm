@@ -64,12 +64,17 @@ osm.addTo(map);
                       MARKER               
 ===================================================*/
 
-var singleMarker = L.marker([-26.585, -65.53]);
+var singleMarker = L.marker([-65.24981, -26.73700]);
 singleMarker.addTo(map);
-var popup = singleMarker.bindPopup('CET 1- Villa Obrera Tafí Viejo')
+var popup = singleMarker.bindPopup('CET 1- Villa Obrera Tafí Viejo- Tafi Viejo esta situada al noreste de San Miguel de TucumAn -  EL centro universitario tiene por objeto, articular con la comunidad , mediante activdades academIcas Sociales y Culturales')
 popup.addTo(map);
+	
 
-
+var singleMarker = L.marker([-65.30646, -27.03190]);
+singleMarker.addTo(map);
+var popup = singleMarker.bindPopup('CET 2 - BELLA VISTA - Raul ALfonsin. La ciudad de Bella Vista estA ubicada en la zona llana de esa provincia, a unos 30 km del cordOn montanoso del Aconquija y cercana al rIo Colorado ')
+popup.addTo(map);
+	
 
 
 const myIcon2 = L.icon({
@@ -150,8 +155,9 @@ L.marker([-26.505, -65.57], {icon: myIcon8}).addTo(proy);
 L.marker([-26.521, -65.517], {icon: myIcon4}).addTo(proy);
 
 L.marker([-26.548, -65.599], {icon: myIcon5}).addTo(proy);
+	
 
-L.marker([-26.81, -65.82], {icon: myIcon7}).bindPopup('comedor y merendero').addTo(map);
+L.marker([-26.81, -65.82], {icon: myIcon7}).bindPopup('comedor y merendero').addTo(proy);
   
 L.marker([-26.69, -65.12], {icon: myIcon6}).bindPopup('Proyecto 99- participación de la poli').addTo(map);
 	
@@ -159,11 +165,13 @@ L.marker([-26.61, -65.32], {icon: myIcon2}).bindPopup('Proyecto 1- recursos de i
 
 L.marker([-26.62, -65.24], {icon: myIcon3}).bindPopup('Proyecto 2 - las propuestas estan realizadas a partir de la construccion colectiva de los diferentes espacios').addTo(map);
 
-L.marker([-26.73, -65.33]).bindPopup('Proyecto 3').addTo(map);
 
-L.marker([-26.5, -65.23]).bindPopup('Proyecto 4').addTo(map);
 	
-  
+L.marker([-65.25676, -26.84557]).bindPopup('Proyecto CET 3 - Barrio ATE').addTo(map);
+
+L.marker([-65.16102, -26.8284]).bindPopup('Proyecto CET 4 - Barrio Piloto Ciudad de Alderetes').addTo(map);
+	
+L.marker([-65.21780, -26.86662]).bindPopup('Proyecto CET 5 - Villa Amalia - San Miguel de Tucuman').addTo(map);
 
 
 /*===================================================
