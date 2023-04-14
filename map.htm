@@ -54,7 +54,7 @@
                       OSM  LAYER               
 ===================================================*/
 
-    var map = L.map('map').setView([-26.8284, -65.16102], 11);
+    var map = L.map('map').setView([-26.8284, -65.16102], 12);
 var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 });
@@ -142,20 +142,20 @@ const myIcon8 = L.icon({
 const osc = L.layerGroup();
 
 
-L.marker([-26.815, -65.151], {icon: myIcon8}).addTo(osc);
+L.marker([-26.815, -65.151], {icon: myIcon8}).bindPopup('Facultad de Filosofía y Letras UNT').addTo(osc);
 
-L.marker([-26.802, -65.160], {icon: myIcon4}).addTo(osc);
+L.marker([-26.802, -65.160], {icon: myIcon4}).bindPopup('Club Atletico Alderetes').addTo(osc);
 
-L.marker([-26.799, -65.148], {icon: myIcon5}).addTo(osc);
+L.marker([-26.799, -65.148], {icon: myIcon5}).bindPopup('Municipalidad de la Ciudad de Alderetes').addTo(osc);
 	
 
-L.marker([-26.777, -65.145], {icon: myIcon7}).bindPopup('comedor y merendero').addTo(osc);
+L.marker([-26.777, -65.145], {icon: myIcon7}).bindPopup('comedor y merendero, funciona de lunes a viernes').addTo(osc);
   
-L.marker([-26.805, -65.155], {icon: myIcon6}).bindPopup('Proyecto 99- participación de la poli').addTo(osc);
+L.marker([-26.805, -65.155], {icon: myIcon6}).bindPopup('Seccional policial zonal').addTo(osc);
 	
-L.marker([-26.801, -65.150], {icon: myIcon2}).bindPopup('Proyecto 1- recursos de investigación').addTo(osc);
+L.marker([-26.801, -65.150], {icon: myIcon2}).bindPopup('Organizacion social Programa alimetario').addTo(osc);
 
-L.marker([-26.778, -65.160], {icon: myIcon3}).bindPopup('Proyecto 2 - las propuestas de los diferentes espacios').addTo(osc);
+L.marker([-26.778, -65.160], {icon: myIcon3}).bindPopup('Centro de Atencion Primaria - consultorios externos').addTo(osc);
 	
 
 	
