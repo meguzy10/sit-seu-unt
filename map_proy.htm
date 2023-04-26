@@ -6,8 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<title>sit</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
 	
 	<link rel="shortcut icon" type="image/x-icon" href="../work_geojson/docs/images/favicon.ico" />
 
@@ -56,7 +54,7 @@
                       OSM  LAYER               
 ===================================================*/
 
-    var map = L.map('map').setView([-26.8284, -65.16102], 11);
+    var map = L.map('map').setView([-26.8084, -65.15102], 14);
 var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 });
@@ -66,113 +64,65 @@ osm.addTo(map);
                       MARKER               
 ===================================================*/
 
+
+	
+
 var singleMarker = L.marker([-26.8284, -65.16102]);
 singleMarker.addTo(map);
 var popup = singleMarker.bindPopup(' Proy CET 3 -Barrio Piloto Alderete')
 popup.addTo(map);
-	
 
-
-const myIcon2 = L.icon({
-    iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/ong_verde_gold.png?raw=true',
-    iconSize: [25, 30],
-    iconAnchor: [25, 25],
-    popupAnchor: [-3, -10],
-
-});
-
-const myIcon3 = L.icon({
-    iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/caps_rojo_gold.png?raw=true',
-    iconSize: [25, 30],
-    iconAnchor: [25, 25],
-    popupAnchor: [-3, -10],
-
-});
-
-const myIcon4 = L.icon({
-    iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_club_gold.png?raw=true',
-    iconSize: [30, 38],
-    iconAnchor: [25, 25],
-    popupAnchor: [-3, -10],
-
-});
-
-const myIcon5 = L.icon({
-    iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_gob_gold.png?raw=true',
-    iconSize: [25, 30],
-    iconAnchor: [25, 25],
-    popupAnchor: [-3, -10],
-
-
-});
-
-	
-	
-const myIcon6 = L.icon({
-    iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_policia_gold.png?raw=true',
-    iconSize: [25, 30],
-    iconAnchor: [25, 25],
-    popupAnchor: [-3, -10],
-
-});
-	
-
-	
-const myIcon7 = L.icon({
-    iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_iglesia_gold.png?raw=true',
-    iconSize: [25, 30],
-    iconAnchor: [25, 25],
-    popupAnchor: [-3, -10],
-
-
-});
 	
 
 	
 	
-	
-const myIcon8 = L.icon({
-    iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_univ.png?raw=true',
-    iconSize: [35, 39],
-    iconAnchor: [25, 25],
-    popupAnchor: [-3, -10],
-
-});
 	
 const myIcon9 = L.icon({
     iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_proy.png?raw=true',
-    iconSize: [50, 50],
+    iconSize: [40, 40],
     iconAnchor: [25, 25],
-    popupAnchor: [-3, -10],
+    popupAnchor: [-3, -3],
 
-});	
-
-const osc = L.layerGroup();
-
-
-L.marker([-26.83420370051284, -65.18537276234215], {icon: myIcon8}).bindPopup('Facultad de Filosofía y Letras UNT').addTo(map);
-
-L.marker([-26.802, -65.160], {icon: myIcon4}).bindPopup('Club Atletico Alderetes').addTo(map);
-
-L.marker([-26.799, -65.148], {icon: myIcon5}).bindPopup('Municipalidad de la Ciudad de Alderetes').addTo(osc);
+});
+	
 	
 
-L.marker([-26.777, -65.145], {icon: myIcon7}).bindPopup('comedor y merendero, funciona de lunes a viernes').addTo(osc);
+const proy = L.layerGroup();
+
+
+L.marker([-26.815, -65.151], {icon: myIcon9}).bindPopup('Proyecto A1').addTo(map);
+
+L.marker([-26.802, -65.160], {icon: myIcon9}).bindPopup('Proyecto A2').addTo(map);
+
+L.marker([-26.799, -65.148], {icon: myIcon9}).bindPopup('Proyecto A3').addTo(map);
+	
+
+L.marker([-26.777, -65.145], {icon: myIcon9}).bindPopup('Proyecto A4').addTo(proy);
   
-L.marker([-26.805, -65.155], {icon: myIcon6}).bindPopup('Seccional policial zonal').addTo(osc);
+L.marker([-26.805, -65.155], {icon: myIcon9}).bindPopup('Proyecto A5').addTo(map);
 	
-L.marker([-26.801, -65.150], {icon: myIcon2}).bindPopup('Organizacion social Programa alimetario').addTo(osc);
+L.marker([-26.801, -65.150], {icon: myIcon9}).bindPopup('Proyecto A7').addTo(map);
 
-L.marker([-26.778, -65.160], {icon: myIcon3}).bindPopup('Centro de Atencion Primaria - consultorios externos').addTo(osc);
+L.marker([-26.778, -65.260], {icon: myIcon9}).bindPopup('Pryecto A8').addTo(proy);
+	
+L.marker([-26.705, -65.125], {icon: myIcon9}).bindPopup('Proyecto A5').addTo(map);
+	
+L.marker([-26.809, -65.1230], {icon: myIcon9}).bindPopup('Proyecto A7').addTo(map);
 
-L.marker([-26.8267518153319, -65.20402600739004], {icon: myIcon9}).bindPopup('Proyecto seguridad alimentaria').addTo(map);
+L.marker([-26.678, -65.160], {icon: myIcon9}).bindPopup('Pryecto A8').addTo(proy);
+	
+	
+L.marker([-26.805, -65.155], {icon: myIcon9}).bindPopup('Proyecto A5').addTo(proy);
+	
+L.marker([-26.801, -65.154], {icon: myIcon9}).bindPopup('Proyecto A7').addTo(proy);
+
+L.marker([-26.578, -65.260], {icon: myIcon9}).bindPopup('Pryecto A8').addTo(proy);
 	
 
-	
+
 L.marker([-26.737, -65.249]).bindPopup('CET 1 - Villa Orera - Tafi Viejo').addTo(map);
 
 L.marker([-27.03190, -65.30646]).bindPopup('Cet 2 - Raul Alfonsin - Bella Vista').addTo(map);
-
 
 	
 
@@ -189,20 +139,17 @@ subdomains: 'abcd',
 });
 CartoDB_DarkMatter.addTo(map);
 
-// Google Map Layer
+var Stamen_Watercolor = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
+ attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+subdomains: 'abcd',
+minZoom: 1,
+maxZoom: 16,
+ext: 'jpg'
+});
+Stamen_Watercolor.addTo(map);
 
-googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',{
-    maxZoom: 20,
-    subdomains:['mt0','mt1','mt2','mt3']
- });
- googleStreets.addTo(map);
 
- // Satelite Layer
-googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
-   maxZoom: 20,
-   subdomains:['mt0','mt1','mt2','mt3']
- });
-googleSat.addTo(map);
+
 
 
 
@@ -211,14 +158,13 @@ googleSat.addTo(map);
 ===================================================*/
 
 var baseLayers = {
-    "Satellite":googleSat,
-    "Google Map":googleStreets,
+    "Water Color":Stamen_Watercolor,
     "OpenStreetMap": osm,
 };
 
 var overlays = {
     "Marker": singleMarker,
-	"OSC": osc
+	"PROY": proy
  };
 
 L.control.layers(baseLayers, overlays).addTo(map);
@@ -238,17 +184,6 @@ L.Control.geocoder().addTo(map);
 	
 	
 </script>
-<script>
-
-
-
-	// Se define una variable que determina el trazado de la polilínea
-	var track = [[-26.737, -65.249],[-26.8267518153319, -65.20402600739004],[-27.03190, -65.30646],[-26.8267518153319, -65.20402600739004],[-26.83420370051284, -65.18537276234215],[-26.8267518153319, -65.20402600739004],[-26.802, -65.160]];
-
-	// Se crea y añade la polínea al mapa ajustando algunos estilos básicos de la misma
-	L.polyline(track,{color:'red',opacity:1}).addTo(map);
-
-</script>
 
 
 <!-- AddToAny BEGIN -->
@@ -266,11 +201,15 @@ L.Control.geocoder().addTo(map);
 <div class="a2a_kit a2a_kit_size_50 a2a_floating_style a2a_default_style" style="bottom:35px;">
   
     
-  <div> <a href="map.htm" target="_self"><img src="Iconos/icono_punto_mapa.png" width="44" height="44" border="0"></a> 
-    <a href="informacion/informacion.htm" target="_self"><img src="Iconos/logo_info.png" width="44" height="44" border="0"></a> 
-    <a href="map1.htm" target="_self"><img src="Iconos/logos_redes2.png" width="44" height="44" border="0"></a>
-    <a href="map2.htm" target="_self"><img src="Iconos/icono_punto.png" width="44" height="44" border="0"></a>	  
-    <a href="imagenes/imagenes.htm" target="_self"><img src="Iconos/logo_imagenes.png" width="44" height="44" border="0"></a> 
+   
+  <div> 
+  
+  	<a href="map.htm" target="_self"><img src="Iconos/icono_punto_mapa.png" width="43" height="43" border="0"></a> 
+    <a href="map2.htm" target="_self"><img src="Iconos/icono_punto.png" width="43" height="43" border="0"></a>
+	<a href="map_redes.htm" target="_self"><img src="Iconos/logos_redes2.png" width="43" height="43" border="0"></a> 	
+    <a href="imagenes/imagenes.htm" target="_self"><img src="Iconos/logo_imagenes.png" width="43" height="43" border="0"></a>
+	<a href="informacion/informacion.htm" target="_self"><img src="Iconos/logo_info.png" width="43" height="43" border="0"></a> 
+	 
   </div>
  
 </div>
