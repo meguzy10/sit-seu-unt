@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<title>sit</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	
 	<link rel="shortcut icon" type="image/x-icon" href="../work_geojson/docs/images/favicon.ico" />
 
@@ -148,7 +149,7 @@ const myIcon9 = L.icon({
 const osc = L.layerGroup();
 
 
-L.marker([-26.83420370051284, -65.18537276234215], {icon: myIcon8}).bindPopup('Facultad de FilosofÌa y Letras UNT').addTo(map);
+L.marker([-26.83420370051284, -65.18537276234215], {icon: myIcon8}).bindPopup('Facultad de Filosof√≠a y Letras UNT').addTo(map);
 
 L.marker([-26.802, -65.160], {icon: myIcon4}).bindPopup('Club Atletico Alderetes').addTo(map);
 
@@ -240,10 +241,10 @@ L.Control.geocoder().addTo(map);
 
 
 
-	// Se define una variable que determina el trazado de la polilÌnea
+	// Se define una variable que determina el trazado de la polil√≠nea
 	var track = [[-26.737, -65.249],[-26.8267518153319, -65.20402600739004],[-27.03190, -65.30646],[-26.8267518153319, -65.20402600739004],[-26.83420370051284, -65.18537276234215],[-26.8267518153319, -65.20402600739004],[-26.802, -65.160]];
 
-	// Se crea y aÒade la polÌnea al mapa ajustando algunos estilos b·sicos de la misma
+	// Se crea y a√±ade la pol√≠nea al mapa ajustando algunos estilos b√°sicos de la misma
 	L.polyline(track,{color:'red',opacity:1}).addTo(map);
 
 </script>
