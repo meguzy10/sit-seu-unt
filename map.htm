@@ -65,9 +65,9 @@ osm.addTo(map);
                       MARKER               
 ===================================================*/
 
-var singleMarker = L.marker([-26.8284, -65.16102]);
+var singleMarker = L.marker([-26.73731754685925, -65.2496994470994]);
 singleMarker.addTo(map);
-var popup = singleMarker.bindPopup(' Proyecto del tercer CET -Barrio Piloto - Ciudad de Alderetes')
+var popup = singleMarker.bindPopup(' CET Villa Obrera - Tafí Viejo -<a href="informacion/cet1.htm" target="_self">La comunidad de la villa particip</a>a activamente...')
 popup.addTo(map);
 	
 
@@ -139,34 +139,51 @@ const myIcon8 = L.icon({
 });
 	
 	
+	
+	
+const myIcon9 = L.icon({
+    iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_puedes.png?raw=true',
+    iconSize: [27, 33],
+    iconAnchor: [25, 25],
+    popupAnchor: [-3, -10],
+
+});
+	
 
 const osc = L.layerGroup();
 
 
-L.marker([-26.815, -65.151], {icon: myIcon8}).bindPopup('Facultad de Filosofía y Letras UNT').addTo(osc);
+L.marker([-26.834174979956963, -65.18532984709789], {icon: myIcon8}).bindPopup('Facultad de Filosofía y Letras UNT -Av. Benjamín Aráoz 800').addTo(osc);
 
-L.marker([-26.802, -65.160], {icon: myIcon4}).bindPopup('Club Atletico Alderetes').addTo(osc);
+L.marker([-26.83645695552659, -65.21196621888261], {icon: myIcon8}).bindPopup('Facultad de Madicina UNT - Lamadrid 875').addTo(osc);
 
-L.marker([-26.799, -65.148], {icon: myIcon5}).bindPopup('Municipalidad de la Ciudad de Alderetes').addTo(osc);
-	
+L.marker([-26.834183612462976, -65.18504066058995], {icon: myIcon8}).bindPopup('Facultad de Odontología UNT - ').addTo(osc);	
 
-L.marker([-26.777, -65.145], {icon: myIcon7}).bindPopup('comedor y merendero, funciona de lunes a viernes').addTo(osc);
+L.marker([-26.723677482829526, -65.25858421434378], {icon: myIcon4}).bindPopup('Clu Villa Mitre - Tafí Viejo').addTo(osc);
   
-L.marker([-26.805, -65.155], {icon: myIcon6}).bindPopup('Seccional policial zonal').addTo(osc);
+L.marker([-26.736658103065285, -65.24864064525048], {icon: myIcon4}).bindPopup('Club Atletico Talleres - Sede Villa Obrera').addTo(osc);
 	
-L.marker([-26.801, -65.150], {icon: myIcon2}).bindPopup('Organizacion social Programa alimetario').addTo(osc);
+L.marker([-26.731741515327545, -65.2506907455584], {icon: myIcon2}).bindPopup('Centro Comunitario La Colmena').addTo(osc);
 
-L.marker([-26.778, -65.160], {icon: myIcon3}).bindPopup('Centro de Atencion Primaria - consultorios externos').addTo(osc);
+L.marker([-26.740077862115953, -65.25076970609834], {icon: myIcon3}).bindPopup('Centro de Atencion Primaria - CAPS Villa Obrera').addTo(osc);
 	
-
-	
-L.marker([-26.737, -65.249]).bindPopup('CET 1 - Villa Obrera - Tafi Viejo - Se inauguró en noviembre de 2022. <a href="informacion/cet1.htm" target="_self">La comunidad de la villa particip</a>a activamente... ').addTo(map);
+L.marker([-26.832345124338833, -65.18474567593401], {icon: myIcon8}).bindPopup('Facultad de Psicología UNT ').addTo(osc);	
 
 L.marker([-27.03190, -65.30646]).bindPopup('Cet 2 - Raul Alfonsin - Bella Vista').addTo(map);
 
-
+L.marker([-26.835052061078123, -65.21183613175384], {icon: myIcon8}).bindPopup('Escuela Universitaria de Enfermería - UNT').addTo(osc);	
 	
+L.marker([-26.822990057626207, -65.30655769127846], {icon: myIcon2}).bindPopup('Comedor Plaza Vieja - Hogar de Cristo - Caritas').addTo(osc);
 
+L.marker([-26.73769117851298, -65.25148189128247], {icon: myIcon8}).bindPopup('Escuela de Comercio Alejandro Heredia').addTo(osc);
+
+L.marker([-26.827938900787014, -65.29246175744532], {icon: myIcon8}).bindPopup('Escuela  Los Pinos - Yerba Buena').addTo(osc);
+
+L.marker([-26.801152479561225, -65.25273460662343], {icon: myIcon8}).bindPopup('Escuela de Comercio N4 - Batalla de Tucumán').addTo(osc);
+
+L.marker([-26.733855440818434, -65.25467144623276], {icon: myIcon5}).bindPopup('Municipalidad de Tafí Viejo').addTo(osc);
+
+L.marker([-26.825939486957296, -65.21973083559455], {icon: myIcon9}).bindPopup('PUEDES UNT - Programa Universitario de Extensión y Desarrollo Social - SEU -').addTo(osc);
 
 
 /*===================================================
