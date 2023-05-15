@@ -148,9 +148,23 @@ const myIcon9 = L.icon({
     popupAnchor: [-3, -10],
 
 });
+
+
+
+const myIcon10 = L.icon({
+    iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_escuela.png?raw=true',
+    iconSize: [25, 30],
+    iconAnchor: [25, 25],
+    popupAnchor: [-3, -10],
+
+});	
+
 	
 
 const osc = L.layerGroup();
+
+
+
 
 
 L.marker([-26.834174979956963, -65.18532984709789], {icon: myIcon8}).bindPopup('Facultad de Filosofía y Letras UNT -Av. Benjamín Aráoz 800').addTo(osc);
@@ -175,20 +189,29 @@ L.marker([-26.835052061078123, -65.21183613175384], {icon: myIcon8}).bindPopup('
 	
 L.marker([-26.822990057626207, -65.30655769127846], {icon: myIcon2}).bindPopup('Comedor Plaza Vieja - Hogar de Cristo - Caritas').addTo(osc);
 
-L.marker([-26.73769117851298, -65.25148189128247], {icon: myIcon8}).bindPopup('Escuela de Comercio Alejandro Heredia').addTo(osc);
+L.marker([-26.73769117851298, -65.25148189128247], {icon: myIcon10}).bindPopup('Escuela de Comercio Alejandro Heredia').addTo(osc);
 
-L.marker([-26.827938900787014, -65.29246175744532], {icon: myIcon8}).bindPopup('Escuela  Los Pinos - Yerba Buena').addTo(osc);
+L.marker([-26.827938900787014, -65.29246175744532], {icon: myIcon10}).bindPopup('Escuela  Los Pinos - Yerba Buena').addTo(osc);
 
-L.marker([-26.801152479561225, -65.25273460662343], {icon: myIcon8}).bindPopup('Escuela de Comercio N4 - Batalla de Tucumán').addTo(osc);
+L.marker([-26.801152479561225, -65.25273460662343], {icon: myIcon10}).bindPopup('Escuela de Comercio N4 - Batalla de Tucumán').addTo(osc);
 
 L.marker([-26.733855440818434, -65.25467144623276], {icon: myIcon5}).bindPopup('Municipalidad de Tafí Viejo').addTo(osc);
 
 L.marker([-26.825939486957296, -65.21973083559455], {icon: myIcon9}).bindPopup('PUEDES UNT - Programa Universitario de Extensión y Desarrollo Social - SEU -').addTo(osc);
 
+L.marker([-27.032141708064472, -65.30646631216862], {icon: myIcon5}).bindPopup('Municipalidad de Bella Vista').addTo(osc);
+
+
+
+
+
+
 
 /*===================================================
                      TILE LAYER               
 ===================================================*/
+
+
 
 var CartoDB_DarkMatter = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
