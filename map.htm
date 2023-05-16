@@ -143,7 +143,7 @@ const myIcon8 = L.icon({
 	
 const myIcon9 = L.icon({
     iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_puedes.png?raw=true',
-    iconSize: [27, 33],
+    iconSize: [33, 33],
     iconAnchor: [25, 25],
     popupAnchor: [-3, -10],
 
@@ -159,7 +159,16 @@ const myIcon10 = L.icon({
 
 });	
 
-	
+const myIcon20 = L.icon({
+    iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_seu.png?raw=true',
+    iconSize: [33, 33],
+    iconAnchor: [25, 25],
+    popupAnchor: [-3, -10],
+
+});	
+
+
+
 
 const osc = L.layerGroup();
 
@@ -183,8 +192,6 @@ L.marker([-26.740077862115953, -65.25076970609834], {icon: myIcon3}).bindPopup('
 	
 L.marker([-26.832345124338833, -65.18474567593401], {icon: myIcon8}).bindPopup('Facultad de Psicología UNT ').addTo(osc);	
 
-L.marker([-27.03190, -65.30646]).bindPopup('Cet 2 - Raul Alfonsin - Bella Vista').addTo(map);
-
 L.marker([-26.835052061078123, -65.21183613175384], {icon: myIcon8}).bindPopup('Escuela Universitaria de Enfermería - UNT').addTo(osc);	
 	
 L.marker([-26.822990057626207, -65.30655769127846], {icon: myIcon2}).bindPopup('Comedor Plaza Vieja - Hogar de Cristo - Caritas').addTo(osc);
@@ -197,12 +204,16 @@ L.marker([-26.801152479561225, -65.25273460662343], {icon: myIcon10}).bindPopup(
 
 L.marker([-26.733855440818434, -65.25467144623276], {icon: myIcon5}).bindPopup('Municipalidad de Tafí Viejo').addTo(osc);
 
-L.marker([-26.825939486957296, -65.21973083559455], {icon: myIcon9}).bindPopup('PUEDES UNT - Programa Universitario de Extensión y Desarrollo Social - SEU -').addTo(osc);
-
 L.marker([-27.032141708064472, -65.30646631216862], {icon: myIcon5}).bindPopup('Municipalidad de Bella Vista').addTo(osc);
 
 
 
+
+L.marker([-27.03190579563901, -65.30646230476067]).bindPopup('Cet 2 - Raul Alfonsin - Bella Vista').addTo(map);
+
+L.marker([-26.825939486957296, -65.21973083559455], {icon: myIcon9}).bindPopup('PUEDES UNT - Programa Universitario de Extensión y Desarrollo Social - SEU -').addTo(map);
+
+L.marker([-26.827345387584323, -65.20363977408229], {icon: myIcon9}).bindPopup('Secretaría de Extensión Universitaria UNT - 25 de Mayo 265 - 1er piso ').addTo(map);
 
 
 
