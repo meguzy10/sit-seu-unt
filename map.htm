@@ -143,7 +143,7 @@ const myIcon8 = L.icon({
 	
 const myIcon9 = L.icon({
     iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_puedes.png?raw=true',
-    iconSize: [33, 33],
+    iconSize: [28, 28],
     iconAnchor: [25, 25],
     popupAnchor: [-3, -10],
 
@@ -161,51 +161,160 @@ const myIcon10 = L.icon({
 
 const myIcon20 = L.icon({
     iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_seu.png?raw=true',
-    iconSize: [33, 33],
+    iconSize: [28, 28],
     iconAnchor: [25, 25],
     popupAnchor: [-3, -10],
 
 });	
 
 
-
-
-const osc = L.layerGroup();
-
-
+   /*===================================================
+                      educación             
+===================================================*/
 
 
 
-L.marker([-26.834174979956963, -65.18532984709789], {icon: myIcon8}).bindPopup('Facultad de Filosofía y Letras UNT -Av. Benjamín Aráoz 800').addTo(osc);
+const edu = L.layerGroup();
 
-L.marker([-26.83645695552659, -65.21196621888261], {icon: myIcon8}).bindPopup('Facultad de Madicina UNT - Lamadrid 875').addTo(osc);
 
-L.marker([-26.834183612462976, -65.18504066058995], {icon: myIcon8}).bindPopup('Facultad de Odontología UNT - ').addTo(osc);	
 
-L.marker([-26.723677482829526, -65.25858421434378], {icon: myIcon4}).bindPopup('Clu Villa Mitre - Tafí Viejo').addTo(osc);
+
+
+L.marker([-26.834174979956963, -65.18532984709789], {icon: myIcon8}).bindPopup('Facultad de Filosofía y Letras UNT - Av. Benjamín Aráoz 800').addTo(edu);
+
+L.marker([-26.83645695552659, -65.21196621888261], {icon: myIcon8}).bindPopup('Facultad de Madicina UNT - Lamadrid 875').addTo(edu);
+
+L.marker([-26.834183612462976, -65.18504066058995], {icon: myIcon8}).bindPopup('Facultad de Odontología UNT ').addTo(edu);	
+
+L.marker([-26.72779820948916, -65.26424464895491], {icon: myIcon10}).bindPopup('Escuela Próspero Mena').addTo(edu);
+
+L.marker([-26.73733236139035, -65.25093019313442], {icon: myIcon10}).bindPopup('Escuela N° 40 Bernardino Rivadavia-- Osvaldo Costello 245').addTo(edu);
+
+L.marker([-26.832345124338833, -65.18474567593401], {icon: myIcon8}).bindPopup('Facultad de Psicología UNT ').addTo(edu);
+
+L.marker([-26.835052061078123, -65.21183613175384], {icon: myIcon8}).bindPopup('Escuela Universitaria de Enfermería - UNT').addTo(edu);
+
+L.marker([-26.73769117851298, -65.25148189128247], {icon: myIcon10}).bindPopup('Escuela de Comercio Alejandro Heredia').addTo(edu);
+
+L.marker([-26.827938900787014, -65.29246175744532], {icon: myIcon10}).bindPopup('Escuela  Los Pinos - Yerba Buena').addTo(edu);
+
+L.marker([-26.801152479561225, -65.25273460662343], {icon: myIcon10}).bindPopup('Escuela de Comercio N4 - Batalla de Tucumán').addTo(edu);
+
+L.marker([-27.03306675469817, -65.30809592884128], {icon: myIcon10}).bindPopup('Escuela Manuel Garcia Fernandez-Escuela Primaria-Bella Vista').addTo(edu);
+
+L.marker([-27.028082406424453, -65.30809576243283], {icon: myIcon10}).bindPopup('<img src="imagenes/116.JPG">  -  Escuela Técnica N1 De Bella Vista	-	M Moreno 35	Bella Vista').addTo(edu);
+
+
+
+
+
+
+
+
+   /*===================================================
+                      deportes             
+===================================================*/
+
+const dep = L.layerGroup();
+
+
+
+L.marker([-26.723677482829526, -65.25858421434378], {icon: myIcon4}).bindPopup('Clu Villa Mitre - Tafí Viejo').addTo(dep);
   
-L.marker([-26.736658103065285, -65.24864064525048], {icon: myIcon4}).bindPopup('Club Atletico Talleres - Sede Villa Obrera').addTo(osc);
+L.marker([-26.736658103065285, -65.24864064525048], {icon: myIcon4}).bindPopup('Club Atletico Talleres - Sede Villa Obrera').addTo(dep);
+
+L.marker([-26.733123853947966, -65.26182346429866], {icon: myIcon4}).bindPopup('Club Atletico Juventud Unida- Club Deportivo-Sarmiento 465 ').addTo(dep);
+
+L.marker([-26.733550942152377, -65.2626865920377], {icon: myIcon4}).bindPopup('Estadio Club Atletico Juventud Unida- Club Deportivo-T4103FPJ, Sarmiento 402-500, Tafí Viejo, Tucumán ').addTo(dep);
+
+L.marker([-27.028487422870594, -65.30285995628385], {icon: myIcon4}).bindPopup('Club Sportivo Bella Vista "Estadio las Palmeras"	Club de Futbol	Juan XXIII, Bella Vista').addTo(dep);
+
+L.marker([-27.032946690949647, -65.30719347118908], {icon: myIcon4}).bindPopup('Plaza San Martin	-	Av. Belgrano 130	Bella Vista').addTo(dep);
+
+
+
+
+
+   /*===================================================
+                      comunidad          
+===================================================*/
+
+
+
+
+const com = L.layerGroup();
+
+
+
+
+
 	
-L.marker([-26.731741515327545, -65.2506907455584], {icon: myIcon2}).bindPopup('Centro Comunitario La Colmena').addTo(osc);
+L.marker([-26.731741515327545, -65.2506907455584], {icon: myIcon2}).bindPopup('Centro Comunitario La Colmena').addTo(com);
 
-L.marker([-26.740077862115953, -65.25076970609834], {icon: myIcon3}).bindPopup('Centro de Atencion Primaria - CAPS Villa Obrera').addTo(osc);
+L.marker([-26.73895245057864, -65.25855938812651], {icon: myIcon2}).bindPopup('Centro de Jubilados y Pensionados Nacionales de Tafi Viejo').addTo(com);
+
+L.marker([-26.822990057626207, -65.30655769127846], {icon: myIcon2}).bindPopup('Comedor Plaza Vieja - Hogar de Cristo - Caritas').addTo(com);
+
+L.marker([-27.02489925658358, -65.30958004894103], {icon: myIcon2}).bindPopup('Merendero Emilito	Centro Comunitario').addTo(com);
+
+L.marker([-27.030525314100757, -65.30694669126873], {icon: myIcon2}).bindPopup('Centro Comunitario Gaucho Rivero-Centro Comunitario	-9 De julio de 1816').addTo(com);
+
+L.marker([-27.029746539683046, -65.29363383359677], {icon: myIcon2}).bindPopup('CCNI Renacer-Centro Comunitario -Barrio San José - Bella Vista').addTo(com);
+
+L.marker([-27.029996305837326, -65.30413285016373], {icon: myIcon2}).bindPopup('Fundación para El Desarrollo y La Promoción- Bella Vista').addTo(com);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   /*===================================================
+                      salud       
+===================================================*/
+
+
+const sal = L.layerGroup();
+
+
+
+
+L.marker([-26.740077862115953, -65.25076970609834], {icon: myIcon3}).bindPopup('Centro de Atencion Primaria - CAPS Villa Obrera').addTo(sal);
+
+
 	
-L.marker([-26.832345124338833, -65.18474567593401], {icon: myIcon8}).bindPopup('Facultad de Psicología UNT ').addTo(osc);	
 
-L.marker([-26.835052061078123, -65.21183613175384], {icon: myIcon8}).bindPopup('Escuela Universitaria de Enfermería - UNT').addTo(osc);	
 	
-L.marker([-26.822990057626207, -65.30655769127846], {icon: myIcon2}).bindPopup('Comedor Plaza Vieja - Hogar de Cristo - Caritas').addTo(osc);
 
-L.marker([-26.73769117851298, -65.25148189128247], {icon: myIcon10}).bindPopup('Escuela de Comercio Alejandro Heredia').addTo(osc);
+   /*===================================================
+                      municipalidades       
+===================================================*/
 
-L.marker([-26.827938900787014, -65.29246175744532], {icon: myIcon10}).bindPopup('Escuela  Los Pinos - Yerba Buena').addTo(osc);
 
-L.marker([-26.801152479561225, -65.25273460662343], {icon: myIcon10}).bindPopup('Escuela de Comercio N4 - Batalla de Tucumán').addTo(osc);
 
-L.marker([-26.733855440818434, -65.25467144623276], {icon: myIcon5}).bindPopup('Municipalidad de Tafí Viejo').addTo(osc);
 
-L.marker([-27.032141708064472, -65.30646631216862], {icon: myIcon5}).bindPopup('Municipalidad de Bella Vista').addTo(osc);
 
+
+
+
+L.marker([-26.733855440818434, -65.25467144623276], {icon: myIcon5}).bindPopup('Municipalidad de Tafí Viejo').addTo(map);
+
+L.marker([-27.032141708064472, -65.30646631216862], {icon: myIcon5}).bindPopup('Municipalidad de Bella Vista').addTo(map);
+
+
+
+
+   /*===================================================
+                      cet      
+===================================================*/
 
 
 
@@ -256,7 +365,10 @@ var baseLayers = {
 
 var overlays = {
     "Marker": singleMarker,
-	"OSC": osc
+	"Org. Comunitarias": com,
+	"Deporte": dep,
+	"Salud": sal,
+	"Educación": edu
  };
 
 L.control.layers(baseLayers, overlays).addTo(map);
