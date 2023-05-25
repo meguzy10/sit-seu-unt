@@ -145,8 +145,8 @@ const myIcon7 = L.icon({
 const myIcon8 = L.icon({
     iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_univ.png?raw=true',
     iconSize: [25, 30],
-    iconAnchor: [25, 25],
-    popupAnchor: [-3, -10],
+    iconAnchor: [13, 15],
+    popupAnchor: [-1, -1],
 
 });
 	
@@ -183,9 +183,9 @@ const myIcon11 = L.icon({
 
 const myIcon12 = L.icon({
     iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_proy2.png?raw=true',
-    iconSize: [40, 40],
-    iconAnchor: [25, 25],
-    popupAnchor: [-3, -3],
+    iconSize: [60, 60],
+    iconAnchor: [30, 30],
+    popupAnchor: [-1, -1],
 
 });
 	
@@ -239,14 +239,25 @@ const proy19 = L.layerGroup();
 
 
 
-L.marker([-27.028203392500718, -65.30221254708877], {icon: myIcon11}).bindPopup('Universidad Abierta Bella Vista').addTo(proy19);
+L.marker([-27.028203392500718, -65.30221254708877], {icon: myIcon11}).bindPopup('<img src="imagenes/123.jpg"> <a href="imagenes/imagenes_1.htm" target="_self">Universidad Abierta Bella Vista - Club Social Bella Vista</a>').addTo(proy19);
 
 L.marker([-27.03190579563901, -65.30646230476067]).bindPopup('Centro de Extensión Territorial  - Raul Alfonsin - Bella Vista').addTo(proy19);
 
-L.marker([-27.032294563832256, -65.30625175844523], {icon: myIcon5}).bindPopup('Municipalidad de Bella Vista').addTo(proy19);
+L.marker([-27.032294563832256, -65.30625175844523], {icon: myIcon5}).bindPopup('Municipalidad de Bella Vista').addTo(map);
 
+L.marker([-27.028487422870594, -65.30285995628385], {icon: myIcon4}).bindPopup('Club Sportivo Bella Vista "Estadio las Palmeras"	Club de Futbol	Juan XXIII, Bella Vista').addTo(proy19);
 
+L.marker([-27.032946690949647, -65.30719347118908], {icon: myIcon4}).bindPopup('Plaza San Martin	-	Av. Belgrano 130	Bella Vista').addTo(proy19);
 
+L.marker([-27.02517299199951, -65.30794021426712], {icon: myIcon4}).bindPopup(' <img src="imagenes/117.jpg">    Club Talleres Voley - Av. Constitución 201 - Bella Vista').addTo(proy19);
+
+L.marker([-27.01315165076888, -65.29529210746962], {icon: myIcon4}).bindPopup(' <img src="imagenes/118.jpg">    Bella Vista Rugby Club- Club de Rugby- Ruta 157 - Bella Vista').addTo(proy19);
+
+L.marker([-27.027939878469116, -65.31094550476078], {icon: myIcon4}).bindPopup('   Club Sportivo Santa Rita - Potrero	futbol- Moreno esq. Maipu	Bella Vista').addTo(proy19);
+
+L.marker([-27.03306675469817, -65.30809592884128], {icon: myIcon10}).bindPopup('Escuela Manuel Garcia Fernandez-Escuela Primaria-Bella Vista').addTo(proy19);
+
+L.marker([-27.028082406424453, -65.30809576243283], {icon: myIcon10}).bindPopup('<img src="imagenes/116.jpg">  -  Escuela Técnica N1 De Bella Vista	-	Mariano Moreno 35	Bella Vista').addTo(proy19);
 
 
 	
@@ -266,9 +277,9 @@ L.marker([-26.870454286068867, -65.23726159127628], {icon: myIcon12}).bindPopup(
 
 L.marker([-26.813394621867886, -65.29363437778686], {icon: myIcon12}).bindPopup('Práctica Social Educativa en la UNT- Escuela Thames - Yerba Buena').addTo(proy20);
 
-L.marker([-26.835052061078123, -65.21183613175384], {icon: myIcon8}).bindPopup('Escuela Universitaria de Enfermería - UNT').addTo(proy20);
+L.marker([-26.835052061078123, -65.21183613175384], {icon: myIcon8}).bindPopup('Escuela Universitaria de Enfermería - UNT').addTo(map);
 
-L.marker([-26.834174979956963, -65.18532984709789], {icon: myIcon8}).bindPopup('Facultad de Filosofía y Letras UNT - Av. Benjamín Aráoz 800').addTo(proy20);
+L.marker([-26.834174979956963, -65.18532984709789], {icon: myIcon8}).bindPopup('Facultad de Filosofía y Letras UNT - Av. Benjamín Aráoz 800').addTo(map);
 
 
 	
@@ -286,8 +297,6 @@ L.marker([-26.85186566841955, -65.71081877593313], {icon: myIcon13}).bindPopup('
 
 L.marker([-26.465274927418015, -66.03677387595106], {icon: myIcon13}).bindPopup('Instalación de Banco Rojo  - Quilmes - Ciudad Sagrada 4/07/2021').addTo(proy21);
 
-L.marker([-26.825939486957296, -65.21973083559455], {icon: myIcon9}).bindPopup('PUEDES UNT - Programa Universitario de Extensión y Desarrollo Social - SEU -').addTo(proy21);
-
 
 
 /*===================================================
@@ -304,7 +313,7 @@ L.marker([-26.7793406093756, -65.32428861432975], {icon: myIcon14}).bindPopup('A
 
 L.marker([-26.80106629274365, -65.25270242011544], {icon: myIcon14}).bindPopup('Adolescencia y Decontrucción -  Cátedra Psc. Social y Escuelas Medias. ESCuela de Comercio 4  - Tratamiento integral de la problematica adolescentes en la esc. media').addTo(proy22);
 
-L.marker([-26.832345124338833, -65.18474567593401], {icon: myIcon8}).bindPopup('Facultad de Psicología UNT ').addTo(proy22);
+L.marker([-26.832345124338833, -65.18474567593401], {icon: myIcon8}).bindPopup('Facultad de Psicología UNT ').addTo(map);
 
 
 
@@ -382,12 +391,15 @@ L.Control.geocoder().addTo(map);
 </script>
 
 
+
+
+
 <script>
 
 
 
 	// Se define una variable que determina el trazado de la polilínea
-	var track = [[-27.028203392500718, -65.30221254708877],[-27.03190579563901, -65.30646230476067],[-27.028203392500718, -65.30221254708877],[-26.825939486957296, -65.21973083559455],[-27.028203392500718, -65.30221254708877],[-27.028203392500718, -65.30221254708877],[-27.032294563832256, -65.30625175844523]];
+	var track = [[-27.028203392500718, -65.30221254708877],[-27.03190579563901, -65.30646230476067],[-27.028203392500718, -65.30221254708877],[-27.03306675469817, -65.30809592884128],[-27.028203392500718, -65.30221254708877],[-27.032294563832256, -65.30625175844523],[-27.028203392500718, -65.30221254708877],[-27.028082406424453, -65.30809576243283]];   
 
 	// Se crea y añade la polínea al mapa ajustando algunos estilos básicos de la misma
 	L.polyline(track,{color:'red',opacity:1}).addTo(proy19);

@@ -55,7 +55,7 @@
                       OSM  LAYER               
 ===================================================*/
 
-    var map = L.map('map').setView([-27.028203392500718, -65.30221254708877], 16);   
+    var map = L.map('map').setView([-27.030203392500718, -65.30221254708877], 16.2);   
 var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 });
@@ -175,24 +175,24 @@ const myIcon10 = L.icon({
 	
 const myIcon11 = L.icon({
     iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_proy.png?raw=true',
-    iconSize: [50, 50],
-    iconAnchor: [20, 20],
-    popupAnchor: [-2, -2],
+    iconSize: [55, 55],
+    iconAnchor: [27, 27],
+    popupAnchor: [-1, -1],
 
 });
 
 const myIcon12 = L.icon({
     iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_proy2.png?raw=true',
     iconSize: [40, 40],
-    iconAnchor: [25, 25],
-    popupAnchor: [-3, -3],
+    iconAnchor: [20, 20],
+    popupAnchor: [-1, -1],
 
 });
 	
 const myIcon13 = L.icon({
     iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_proy3.png?raw=true',
     iconSize: [40, 40],
-    iconAnchor: [25, 25],
+    iconAnchor: [20, 20],
     popupAnchor: [-3, -3],
 
 });
@@ -200,7 +200,7 @@ const myIcon13 = L.icon({
 const myIcon14 = L.icon({
     iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_proy4.png?raw=true',
     iconSize: [40, 40],
-    iconAnchor: [25, 25],
+    iconAnchor: [20, 20],
     popupAnchor: [-3, -3],
 
 });
@@ -208,7 +208,7 @@ const myIcon14 = L.icon({
 const myIcon15 = L.icon({
     iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_proy5.png?raw=true',
     iconSize: [40, 40],
-    iconAnchor: [25, 25],
+    iconAnchor: [20, 20],
     popupAnchor: [-3, -3],
 
 });
@@ -216,8 +216,8 @@ const myIcon15 = L.icon({
 const myIcon20 = L.icon({
     iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_seu.png?raw=true',
     iconSize: [28, 28],
-    iconAnchor: [25, 25],
-    popupAnchor: [-3, -10],
+    iconAnchor: [20, 20],
+    popupAnchor: [-3, -3],
 
 });
 
@@ -241,7 +241,7 @@ const proy19 = L.layerGroup();
 
 L.marker([-27.028203392500718, -65.30221254708877], {icon: myIcon11}).bindPopup('<img src="imagenes/123.jpg"> <a href="imagenes/imagenes_1.htm" target="_self">Universidad Abierta Bella Vista - Club Social Bella Vista</a>').addTo(map);
 
-L.marker([-27.03190579563901, -65.30646230476067]).bindPopup('Centro de Extensión Territorial  - Raul Alfonsin - Bella Vista').addTo(map);
+L.marker([-27.03190579563901, -65.30646230476067]).bindPopup('<a href="informacion/cet2.htm" target="_self">Centro de Extensión Territorial  - Raul Alfonsin - Bella Vista</a>').addTo(map);
 
 L.marker([-27.032294563832256, -65.30625175844523], {icon: myIcon5}).bindPopup('Municipalidad de Bella Vista').addTo(map);
 
@@ -372,10 +372,7 @@ var baseLayers = {
 var overlays = {
     "CET Tafi Viejo": singleMarker2,
 	"CET Bella Vista": singleMarker,
-	"PROY Univ. Abierta B. Vista": proy19,
-	"PROY PSE en la UNT": proy20,
-	"PROY Banco Rojo": proy21,
-	"PROY Adoles. y Decontrucción": proy22
+	
 	
  };
 
