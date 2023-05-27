@@ -65,16 +65,15 @@ osm.addTo(map);
                       MARKER               
 ===================================================*/
 
-
 var singleMarker = L.marker([-27.03190, -65.30646]);
 singleMarker.addTo(map);
-var popup = singleMarker.bindPopup('Cet 2 - Raul Alfonsin - Bella Vista')
+var popup = singleMarker.bindPopup('<a href="informacion/cet2.htm" target="_self">Centro de Extensión Territorial - Raul Alfonsin - Bella Vista</a>')
 popup.addTo(map);
 
 
 var singleMarker2 = L.marker([-26.737, -65.249]);
 singleMarker2.addTo(map);
-var popup = singleMarker2.bindPopup('Cet 1 -Villa Obrera - Tafi Viejo - Se inauguró en noviembre de 2022.')
+var popup = singleMarker2.bindPopup('<a href="informacion/cet1.htm" target="_self">Centro de Extensión Territorial - Villa Obrera - Tafí Viejo</a> ')
 popup.addTo(map);
 
 
@@ -83,7 +82,7 @@ popup.addTo(map);
 const myIcon2 = L.icon({
     iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/ong_verde_gold.png?raw=true',
     iconSize: [25, 30],
-    iconAnchor: [25, 25],
+    iconAnchor: [13, 15],
     popupAnchor: [-3, -10],
 
 });
@@ -91,7 +90,7 @@ const myIcon2 = L.icon({
 const myIcon3 = L.icon({
     iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/caps_rojo_gold.png?raw=true',
     iconSize: [25, 30],
-    iconAnchor: [25, 25],
+    iconAnchor: [13, 15],
     popupAnchor: [-3, -10],
 
 });
@@ -103,7 +102,7 @@ const myIcon3 = L.icon({
 const myIcon4 = L.icon({
     iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_club_gold.png?raw=true',
     iconSize: [25, 30],
-    iconAnchor: [25, 25],
+    iconAnchor: [13, 15],
     popupAnchor: [-3, -10],
 
 });
@@ -111,7 +110,7 @@ const myIcon4 = L.icon({
 const myIcon5 = L.icon({
     iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_gob_gold.png?raw=true',
     iconSize: [25, 30],
-    iconAnchor: [25, 25],
+    iconAnchor: [13, 15],
     popupAnchor: [-3, -10],
 
 
@@ -122,7 +121,7 @@ const myIcon5 = L.icon({
 const myIcon6 = L.icon({
     iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_policia_gold.png?raw=true',
     iconSize: [25, 30],
-    iconAnchor: [25, 25],
+    iconAnchor: [13, 15],
     popupAnchor: [-3, -10],
 
 });
@@ -132,7 +131,7 @@ const myIcon6 = L.icon({
 const myIcon7 = L.icon({
     iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_iglesia_gold.png?raw=true',
     iconSize: [25, 30],
-    iconAnchor: [25, 25],
+    iconAnchor: [13, 15],
     popupAnchor: [-3, -10],
 
 
@@ -175,7 +174,7 @@ const myIcon10 = L.icon({
 	
 const myIcon11 = L.icon({
     iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_proy.png?raw=true',
-    iconSize: [40, 40],
+    iconSize: [50, 50],
     iconAnchor: [25, 25],
     popupAnchor: [-3, -3],
 
@@ -183,15 +182,15 @@ const myIcon11 = L.icon({
 
 const myIcon12 = L.icon({
     iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_proy2.png?raw=true',
-    iconSize: [60, 60],
-    iconAnchor: [30, 30],
+    iconSize: [50, 50],
+    iconAnchor: [25, 25],
     popupAnchor: [-1, -1],
 
 });
 	
 const myIcon13 = L.icon({
     iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_proy3.png?raw=true',
-    iconSize: [40, 40],
+    iconSize: [50, 50],
     iconAnchor: [25, 25],
     popupAnchor: [-3, -3],
 
@@ -199,7 +198,7 @@ const myIcon13 = L.icon({
 	
 const myIcon14 = L.icon({
     iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_proy4.png?raw=true',
-    iconSize: [40, 40],
+    iconSize: [50, 50],
     iconAnchor: [25, 25],
     popupAnchor: [-3, -3],
 
@@ -207,7 +206,7 @@ const myIcon14 = L.icon({
 
 const myIcon15 = L.icon({
     iconUrl: 'https://github.com/meguzy10/sit/blob/main/Iconos/icono_proy5.png?raw=true',
-    iconSize: [40, 40],
+    iconSize: [50, 50],
     iconAnchor: [25, 25],
     popupAnchor: [-3, -3],
 
@@ -448,14 +447,11 @@ L.Control.geocoder().addTo(map);
   
     
    
-  <div> 
-  
-  	<a href="map.htm" target="_self"><img src="Iconos/icono_punto_mapa.png" width="43" height="43" border="0"></a> 
-    <a href="map2.htm" target="_self"><img src="Iconos/icono_punto.png" width="43" height="43" border="0"></a>
-	<a href="map_redes.htm" target="_self"><img src="Iconos/logos_redes2.png" width="43" height="43" border="0"></a> 	
-    <a href="imagenes/imagenes.htm" target="_self"><img src="Iconos/logo_imagenes.png" width="43" height="43" border="0"></a>
-	<a href="informacion/informacion.htm" target="_self"><img src="Iconos/logo_info.png" width="43" height="43" border="0"></a> 
-	 
+  <div> <a href="map.htm" target="_self"><img src="Iconos/icono_punto_mapa.png" width="43" height="43" border="0"></a> 
+    <a href="map_proy.htm" target="_self"><img src="Iconos/icono_punto.png" width="43" height="43" border="0"></a> 
+    <a href="map_redes.htm" target="_self"><img src="Iconos/logos_redes2.png" width="43" height="43" border="0"></a> 
+    <a href="imagenes/imagenes.htm" target="_self"><img src="Iconos/logo_imagenes.png" width="43" height="43" border="0"></a> 
+    <a href="informacion/informacion.htm" target="_self"><img src="Iconos/logo_info.png" width="43" height="43" border="0"></a> 
   </div>
  
 </div>
