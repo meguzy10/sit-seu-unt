@@ -55,7 +55,7 @@
                       OSM  LAYER               
 ===================================================*/
 
-    var map = L.map('map').setView([-26.80106629274365, -65.25270242011544], 15);   
+    var map = L.map('map').setView([-26.80106629274365, -65.25270242011544], 13);   
 var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 });
@@ -229,6 +229,14 @@ L.marker([-26.827345387584323, -65.20363977408229], {icon: myIcon20}).bindPopup(
 
 L.marker([-26.825939486957296, -65.21973083559455], {icon: myIcon9}).bindPopup('PUEDES UNT - Programa Universitario de Extensión y Desarrollo Social - SEU -').addTo(map);
 
+L.marker([-26.82243268260567, -65.20260122011449], {icon: myIcon14}).bindPopup('Adolescencia y Decontrucción -  Cátedra Psc. Social y Escuelas Medias.Gymnasium - Tratamiento integral de la problematica adolescentes en la esc. media').addTo(map);
+
+L.marker([-26.7793406093756, -65.32428861432975], {icon: myIcon14}).bindPopup('Adolescencia y Decontrucción -  Cátedra Psc. Social y Escuelas Medias. EAS - Tratamiento integral de la problematica adolescentes en la esc. media').addTo(map);
+
+L.marker([-26.80106629274365, -65.25270242011544], {icon: myIcon14}).bindPopup('Adolescencia y Decontrucción -  Cátedra Psc. Social y Escuelas Medias. ESCuela de Comercio 4  - Tratamiento integral de la problematica adolescentes en la esc. media').addTo(map);
+
+L.marker([-26.832345124338833, -65.18474567593401], {icon: myIcon8}).bindPopup('Facultad de Psicología UNT ').addTo(map);
+
 	
    /*===================================================
                       proyectos 2019 - Universidad Abierta Bella Vista
@@ -298,21 +306,16 @@ L.marker([-26.465274927418015, -66.03677387595106], {icon: myIcon13}).bindPopup(
 
 
 
-/*===================================================
-                      proyectos 2022 - Adolescencia           
-===================================================*/	
 
 
-const proy22 = L.layerGroup();
 
+L.marker([-26.82243268260567, -65.20260122011449], {icon: myIcon14}).bindPopup('Adolescencia y Decontrucción -  Cátedra Psicología Social y Escuelas Medias - Gymnasium Universitario - Tratamiento integral de la problematica adolescentes en la esc. media').addTo(map);
 
-L.marker([-26.82243268260567, -65.20260122011449], {icon: myIcon14}).bindPopup('Adolescencia y Decontrucción -  Cátedra Psc. Social y Escuelas Medias.Gymnasium - Tratamiento integral de la problematica adolescentes en la esc. media').addTo(proy22);
+L.marker([-26.7793406093756, -65.32428861432975], {icon: myIcon14}).bindPopup('Adolescencia y Decontrucción -  Cátedra Psicología Social y Escuelas Medias. Escuela de Agricultura y Sacarotecnia UNT-  Tratamiento integral de la problematica adolescentes en la esc. media').addTo(map);
 
-L.marker([-26.7793406093756, -65.32428861432975], {icon: myIcon14}).bindPopup('Adolescencia y Decontrucción -  Cátedra Psc. Social y Escuelas Medias. EAS - Tratamiento integral de la problematica adolescentes en la esc. media').addTo(proy22);
+L.marker([-26.80106629274365, -65.25270242011544], {icon: myIcon14}).bindPopup('<a href="imagenes/imagenes_00.htm" target="_self">Adolescencia y Decontrucción</a> -  Cátedra Psc. Social y Escuelas Medias. Escuela de Comercio N°4  - Tratamiento integral de la problematica adolescentes en la esc. media').addTo(map);
 
-L.marker([-26.80106629274365, -65.25270242011544], {icon: myIcon14}).bindPopup('Adolescencia y Decontrucción -  Cátedra Psc. Social y Escuelas Medias. ESCuela de Comercio 4  - Tratamiento integral de la problematica adolescentes en la esc. media').addTo(proy22);
-
-L.marker([-26.832345124338833, -65.18474567593401], {icon: myIcon8}).bindPopup('Facultad de Psicología UNT ').addTo(map);
+L.marker([-26.832345124338833, -65.18474567593401], {icon: myIcon8}).bindPopup(' <img src="imagenes/121.jpg">Facultad de Psicología	- Universidad Nacional de Tucumán	Av. Benjamín Aráoz 800').addTo(unt);
 
 
 
@@ -363,12 +366,8 @@ var baseLayers = {
 
 var overlays = {
     "CET Tafi Viejo": singleMarker2,
-	"CET Bella Vista": singleMarker,
-	"PROY Univ. Abierta B. Vista": proy19,
-	"PROY PSE en la UNT": proy20,
-	"PROY Banco Rojo": proy21,
-	"PROY Adoles. y Decontrucción": proy22
-	
+	"CET Bella Vista": singleMarker
+		
  };
 
 L.control.layers(baseLayers, overlays).addTo(map);
@@ -393,29 +392,9 @@ L.Control.geocoder().addTo(map);
 
 
 
-<script>
 
 
 
-	// Se define una variable que determina el trazado de la polilínea
-	var track = [[-27.028203392500718, -65.30221254708877],[-27.03190579563901, -65.30646230476067],[-27.028203392500718, -65.30221254708877],[-27.03306675469817, -65.30809592884128],[-27.028203392500718, -65.30221254708877],[-27.032294563832256, -65.30625175844523],[-27.028203392500718, -65.30221254708877],[-27.028082406424453, -65.30809576243283]];   
-
-	// Se crea y añade la polínea al mapa ajustando algunos estilos básicos de la misma
-	L.polyline(track,{color:'red',opacity:1}).addTo(proy19);
-
-</script>
-
-<script>
-
-
-
-	// Se define una variable que determina el trazado de la polilínea
-	var track1 = [[-26.813394621867886, -65.29363437778686],[-26.835052061078123, -65.21183613175384],[-26.813394621867886, -65.29363437778686],[-26.834174979956963, -65.18532984709789],[-26.813394621867886, -65.29363437778686],[-26.825939486957296, -65.21973083559455]];
-
-	// Se crea y añade la polínea al mapa ajustando algunos estilos básicos de la misma
-	L.polyline(track1,{color:'green',opacity:1}).addTo(proy20);
-
-</script>
 
 <script>
 
@@ -425,7 +404,7 @@ L.Control.geocoder().addTo(map);
 	var track2 = [[-26.82243268260567, -65.20260122011449],[-26.7793406093756, -65.32428861432975],[-26.80106629274365, -65.25270242011544],[-26.832345124338833, -65.18474567593401],[-26.832345124338833, -65.18474567593401],[-26.825939486957296, -65.21973083559455]];
 
 	// Se crea y añade la polínea al mapa ajustando algunos estilos básicos de la misma
-	L.polyline(track2,{color:'blue',opacity:1}).addTo(proy22);
+	L.polyline(track2,{color:'blue',opacity:1}).addTo(map);
 
 </script>
 
